@@ -27,7 +27,7 @@ FLAGS = -Wall -Wextra -Werror
 all: $(NAME)
 
 %.o: %.c
-	$(CC) -c $(FLAGS) $< -o $@
+	cc -c $(FLAGS) $< -o $@
 
 $(NAME): $(OBJS) libft.h
 	ar -crs $(NAME) $(OBJS)
