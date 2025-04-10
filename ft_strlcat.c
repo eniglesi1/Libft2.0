@@ -15,11 +15,11 @@
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	a;
-	int		i;
+	size_t	i;
 
 	a = 0;
 	i = 0;
-	while (dst[a] != '\0')
+	while (dst[a] != '\0' && a < size)
 		a++;
 	if (size > a)
 		size = (size - a) - 1;
@@ -34,15 +34,4 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	}
 	dst[a] = '\0';
 	return (ft_strlen(dst) + ft_strlen(src) - i);
-}
-
-//ft_strlcat ok success clean ✓✓✓✓✓✓✗✓✓ KO
-#include <stdio.h>
-int main(void)
-{
-	char dst[] = "rrrrrrrrrrrrrrr";
-	int i = ft_strlcat(dst, "lorem ipsum dolor sit amet", 5);
-	printf("%d", i);
-	write(1, "\n", 1);
-	write(1, dst, 15);
 }

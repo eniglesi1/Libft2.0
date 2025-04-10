@@ -20,11 +20,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	i = ft_strlen(s2) + ft_strlen(s1) + 1;
 	if (i == 0)
 		return (NULL);
-	a = malloc(sizeof(char) * i + 1);
+	a = malloc(sizeof(char) * i);
 	if (!a)
 		return (NULL);
 	ft_strlcpy(a, s1, i + 1);
 	ft_strlcat(a, s2, i + 1);
 	return (a);
 }
-/*ft_strjoin : 1.OK 2.MKO 3.OK 4.MKO 5.OK 6.MKO 7.OK 8.MKO */
