@@ -3,17 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eniglesi <eniglesi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: eiglesia <eiglesia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/06 18:46:35 by eniglesi          #+#    #+#             */
-/*   Updated: 2021/08/06 19:26:52 by eniglesi         ###   ########.fr       */
+/*   Updated: 2026/01/22 08:50:14 by eiglesia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isalpha(int c)
 {
-	if ((c > 64 && c < 91) || (c > 96 && c < 123))
-		return (1);
-	else
-		return (0);
+	return ((c > 64 && c < 91) || (c > 96 && c < 123));
 }

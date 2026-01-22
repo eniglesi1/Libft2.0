@@ -3,17 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eniglesi <eniglesi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: eiglesia <eiglesia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/06 18:47:23 by eniglesi          #+#    #+#             */
-/*   Updated: 2021/08/06 19:26:47 by eniglesi         ###   ########.fr       */
+/*   Updated: 2026/01/22 08:51:26 by eiglesia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isprint(int c)
 {
-	if (c > 31 && c < 127)
-		return (1);
-	else
-		return (0);
+	return (c > 31 && c < 127);
 }

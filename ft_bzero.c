@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eniglesi <eniglesi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: eiglesia <eiglesia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/06 18:47:49 by eniglesi          #+#    #+#             */
-/*   Updated: 2021/08/06 19:26:33 by eniglesi         ###   ########.fr       */
+/*   Updated: 2026/01/22 08:58:17 by eiglesia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,5 @@
 void	ft_bzero(void *s, size_t n)
 {
 	while (n > 0)
-	{
-		n--;
-		((unsigned char *)s)[n] = '\0';
-	}
+		((unsigned char *)s)[--n] = '\0';
 }

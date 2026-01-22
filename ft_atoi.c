@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eniglesi <eniglesi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: eiglesia <eiglesia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/06 18:50:37 by eniglesi          #+#    #+#             */
-/*   Updated: 2021/09/27 09:14:09 by eniglesi         ###   ########.fr       */
+/*   Updated: 2026/01/22 08:49:09 by eiglesia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,21 +18,16 @@ int	ft_atoi(const char *nptr)
 	int	b;
 	int	neg;
 
-	neg = 0;
+	neg = 1;
 	a = 0;
 	b = 0;
 	if (nptr[b] == 0)
 		return (0);
-	while (nptr[b] == 0 || (nptr[b] >= 9 && nptr[b] <= 13) || nptr[b] == ' ')
+	while (nptr[b] == 0 || (nptr[b] > 8 && nptr[b] < 14) || nptr[b] == ' ')
 		b++;
-	if (nptr[b] == '-')
-		neg++;
-	else if (nptr[b] == '+')
-		b++;
-	b = b + neg;
+	if (nptr[b] == '-' || nptr[b] == '+')
+		neg *= (44 - nptr[b++]);
 	while (nptr[b] != '\0' && nptr[b] > 47 && nptr[b] < 58)
 		a = a * 10 + (nptr[b++] - 48);
-	if (neg % 2 == 1)
-		a = a * -1;
-	return (a);
+	return (a * neg);
 }
