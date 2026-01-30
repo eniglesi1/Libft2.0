@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eniglesi <eniglesi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: enmanueliglesiasgarciadelcastillo <enma    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/06 18:49:54 by eniglesi          #+#    #+#             */
-/*   Updated: 2021/08/06 19:25:55 by eniglesi         ###   ########.fr       */
+/*   Updated: 2026/01/30 17:27:42 by enmanueligl      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,8 @@ char	*ft_strrchr(const char *s, int c)
 		i++;
 	if (s[i] == (unsigned char)c)
 		return (((char *)s) + i);
-	while (i != 0)
-	{
-		i--;
+	while (i-- != 0)
 		if (s[i] == (unsigned char)c)
 			return (((char *)s) + i);
-	}
 	return (NULL);
 }

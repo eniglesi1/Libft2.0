@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eniglesi <eniglesi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: enmanueliglesiasgarciadelcastillo <enma    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/25 14:31:25 by eniglesi          #+#    #+#             */
-/*   Updated: 2021/09/27 10:41:02 by eniglesi         ###   ########.fr       */
+/*   Updated: 2026/01/30 16:08:04 by enmanueligl      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

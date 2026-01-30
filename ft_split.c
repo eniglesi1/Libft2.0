@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: enmanueliglesiasgarciadelcastillo <enma    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 19:26:29 by eniglesi          #+#    #+#             */
-/*   Updated: 2021/09/18 12:49:40 by marvin           ###   ########.fr       */
+/*   Updated: 2026/01/30 16:21:10 by enmanueligl      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,17 +18,14 @@ static int	count_words(char const *s, char c)
 	int	i;
 
 	words = 0;
-	i = 0;
+	i = -1;
 	if (c < 0)
 		return (0);
 	if (s[0] != c && s[0] != 0)
 		words++;
-	while (s[i] != '\0' && s[i + 1] != '\0')
-	{
+	while (s[++i] != '\0' && s[i + 1] != '\0')
 		if (s[i] == c && s[i + 1] != c)
 			words++;
-		i++;
-	}
 	return (words);
 }
 

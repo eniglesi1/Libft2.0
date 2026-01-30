@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eniglesi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: enmanueliglesiasgarciadelcastillo <enma    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 13:42:03 by eniglesi          #+#    #+#             */
-/*   Updated: 2021/09/15 15:22:05 by eniglesi         ###   ########.fr       */
+/*   Updated: 2026/01/30 16:05:54 by enmanueligl      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,14 +58,8 @@ char	*ft_itoa(int n)
 	if (n != 0 && n != -2147483648)
 		a = ft_intochar(i, n);
 	else if (n == -2147483648)
-	{
-		a = malloc(12);
-		ft_strlcpy(a, "-2147483648", 12);
-	}
+		a = ft_strdup("-2147483648");
 	else
-	{
-		a = malloc(2);
-		ft_strlcpy(a, "0", 2);
-	}
+		a = ft_strdup("0");
 	return (a);
 }

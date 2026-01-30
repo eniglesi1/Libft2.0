@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eniglesi <eniglesi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: enmanueliglesiasgarciadelcastillo <enma    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/06 18:48:33 by eniglesi          #+#    #+#             */
-/*   Updated: 2021/08/06 19:26:03 by eniglesi         ###   ########.fr       */
+/*   Updated: 2026/01/30 17:31:29 by enmanueligl      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@ int	ft_toupper(int c)
 {
 	if (c > 96 && c < 123)
 		return (c - 32);
-	else
-		return (c);
+	return (c);
 }
 /*#include <stdio.h>
 
