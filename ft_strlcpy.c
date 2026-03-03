@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: enmanueliglesiasgarciadelcastillo <enma    +#+  +:+       +#+        */
+/*   By: eiglesia <eiglesia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/06 18:48:14 by eniglesi          #+#    #+#             */
-/*   Updated: 2026/01/30 16:39:13 by enmanueligl      ###   ########.fr       */
+/*   Updated: 2026/03/03 18:05:18 by eiglesia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	if (!dst || !src)
-		return (0);
 	if (size == 0)
 		return (ft_strlen(src));
 	dst[0] = 0;
