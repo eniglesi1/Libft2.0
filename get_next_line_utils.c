@@ -6,7 +6,7 @@
 /*   By: eiglesia <eiglesia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 21:49:20 by eiglesia          #+#    #+#             */
-/*   Updated: 2026/03/03 20:47:23 by eiglesia         ###   ########.fr       */
+/*   Updated: 2026/03/05 18:38:25 by eiglesia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,7 @@ int	readmem(int fd, char *extra)
 	return (baits);
 }
 
+// ft_strlen now available
 int	ft_is_line(char *extra, int len)
 {
 	int	i;

@@ -6,10 +6,16 @@
 #    By: eiglesia <eiglesia@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/10 18:41:58 by eniglesi          #+#    #+#              #
-#    Updated: 2026/03/03 20:49:25 by eiglesia         ###   ########.fr        #
+#    Updated: 2026/03/05 18:35:36 by eiglesia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+PRINTF_SRC = 	ft_printf.c 	\
+			ft_putchar_fd_r.c 	\
+			ft_putnbr_fd_r.c 	\
+			ft_putstr_fd_r.c
+GNL_SRC = 	get_next_line.c 	\
+			get_next_line_utils.c 
 SRC = 	ft_atoi.c 		ft_bzero.c 		ft_calloc.c 	ft_isalnum.c 	\
 		ft_isalpha.c 	ft_isascii.c 	ft_isdigit.c 	ft_isprint.c 	\
 		ft_itoa.c 		ft_memchr.c 	ft_memcmp.c 	ft_memcpy.c 	\
@@ -18,7 +24,7 @@ SRC = 	ft_atoi.c 		ft_bzero.c 		ft_calloc.c 	ft_isalnum.c 	\
 		ft_strjoin.c 	ft_strlcat.c 	ft_strlcpy.c 	ft_strlen.c 	\
 		ft_strmapi.c 	ft_strncmp.c 	ft_strnstr.c 	ft_strrchr.c 	\
 		ft_strtrim.c 	ft_substr.c 	ft_tolower.c 	ft_toupper.c 	\
-		ft_putendl_fd.c ft_putnbr_fd.c 	get_next_line.c	get_next_line_utils.c
+		ft_putendl_fd.c ft_putnbr_fd.c 	$(PRINTF_SRC) 	$(GNL_SRC)
 OBJS = $(SRC:.c=.o)
 HEADERS = libft.h get_next_line.h
 NAME = libft.a
