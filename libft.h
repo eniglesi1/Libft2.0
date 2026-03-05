@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eniglesi <eniglesi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: eiglesia <eiglesia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/07 13:24:55 by eniglesi          #+#    #+#             */
-/*   Updated: 2021/09/27 09:24:57 by eniglesi         ###   ########.fr       */
+/*   Updated: 2026/03/05 18:27:46 by eiglesia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@
 # include <string.h>
 # include <stddef.h>
 # include <stdio.h>
+# include "get_next_line.h"
+# include "ft_printf.h"
 
 // void *funcs
 void	*ft_memset(void *s, int c, size_t n);
@@ -46,6 +48,11 @@ int		ft_toupper(int c);
 int		ft_atoi(const char *nptr);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
+
+// printf added funcs
+int		ft_putnbr_fd_r(int n, int fd);
+int		ft_putchar_fd_r(char c, int fd);
+int		ft_putstr_fd_r(char *s, int fd);
 
 // size_t funcs
 size_t	ft_strlen(const char *s);
