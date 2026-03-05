@@ -6,7 +6,7 @@
 #    By: eiglesia <eiglesia@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/10 18:41:58 by eniglesi          #+#    #+#              #
-#    Updated: 2026/03/05 18:35:36 by eiglesia         ###   ########.fr        #
+#    Updated: 2026/03/05 18:41:21 by eiglesia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ SRC = 	ft_atoi.c 		ft_bzero.c 		ft_calloc.c 	ft_isalnum.c 	\
 		ft_strtrim.c 	ft_substr.c 	ft_tolower.c 	ft_toupper.c 	\
 		ft_putendl_fd.c ft_putnbr_fd.c 	$(PRINTF_SRC) 	$(GNL_SRC)
 OBJS = $(SRC:.c=.o)
-HEADERS = libft.h get_next_line.h
+HEADERS = libft.h
 NAME = libft.a
 FLAGS = -Wall -Wextra -Werror 
 
