@@ -6,7 +6,7 @@
 /*   By: eiglesia <eiglesia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 19:26:29 by eniglesi          #+#    #+#             */
-/*   Updated: 2026/03/03 20:15:06 by eiglesia         ###   ########.fr       */
+/*   Updated: 2026/03/05 18:47:41 by eiglesia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ static int	word_len(const char *s, char c, int start)
 	return (i);
 }
 
-void	free_all(char **ptr, int start)
+void	free_ptrs(char **ptr, int start)
 {
 	while (--start >= 0)
 		free(ptr[start]);
@@ -65,7 +65,7 @@ char	**ft_split(char const *s, char c)
 		{
 			ptr[start] = ft_substr(s, i, word_len(s, c, i));
 			if (ptr[start++] == NULL)
-				return (free_all(ptr, start - 1), NULL);
+				return (free_ptrs(ptr, start - 1), NULL);
 			i = i + word_len(s, c, i);
 		}
 		else

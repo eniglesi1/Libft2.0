@@ -6,7 +6,7 @@
 /*   By: eiglesia <eiglesia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/07 13:24:55 by eniglesi          #+#    #+#             */
-/*   Updated: 2026/03/05 18:27:46 by eiglesia         ###   ########.fr       */
+/*   Updated: 2026/03/05 18:50:25 by eiglesia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+void	free_ptrs(char **ptr, int start);
 
 // int funcs
 int		ft_isalpha(int c);

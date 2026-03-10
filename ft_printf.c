@@ -6,7 +6,7 @@
 /*   By: eiglesia <eiglesia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 18:48:56 by eniglesi          #+#    #+#             */
-/*   Updated: 2026/03/05 18:37:45 by eiglesia         ###   ########.fr       */
+/*   Updated: 2026/03/10 21:00:46 by eiglesia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static int	ft_baits(unsigned long n)
 
 static int	ft_hexa(unsigned long i, char *base, int n)
 {
-	char	*c;
+	char	c[32];
 	long	aux;
 	int		baits;
 
@@ -42,7 +42,7 @@ static int	ft_hexa(unsigned long i, char *base, int n)
 		return (ft_putstr_fd_r("(nil)", 1));
 	aux = ft_baits(i);
 	baits = 0;
-	c = ft_calloc(sizeof(char), aux + 1);
+	ft_bzero(c, 32);
 	if (n == 4)
 		baits += ft_putstr_fd_r("0x", 1);
 	if (i == 0)
@@ -54,7 +54,6 @@ static int	ft_hexa(unsigned long i, char *base, int n)
 		i /= 16;
 	}
 	baits += ft_putstr_fd_r(c, 1);
-	free(c);
 	return (baits);
 }
 
