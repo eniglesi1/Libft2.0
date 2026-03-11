@@ -6,7 +6,7 @@
 #    By: eiglesia <eiglesia@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/10 18:41:58 by eniglesi          #+#    #+#              #
-#    Updated: 2026/03/10 23:56:04 by eiglesia         ###   ########.fr        #
+#    Updated: 2026/03/12 00:48:02 by eiglesia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,19 +33,28 @@ OBJS = $(SRC:.c=.o)
 HEADERS = libft.h
 NAME = libft.a
 FLAGS = -Wall -Wextra -Werror 
+LIBRARY ?= 0
 
 all: $(NAME)
 
 %.o: %.c
-	cc -c $(FLAGS) $< -o $@
+	@echo "	Creando $@"
+	@cc -c $(FLAGS) $< -o $@
 
-$(NAME): $(OBJS) libft.h
-	ar -crs $(NAME) $(OBJS)
+$(NAME): $(OBJS)
+	@echo "Creando $(NAME)"
+	@ar -crs $(NAME) $(OBJS)
 
 clean:
-	/bin/rm -f $(OBJS)
+ifeq ($(LIBRARY),0)
+	@echo "Limpiando objs from $(NAME)"
+endif
+	@/bin/rm -f $(OBJS)
 
 fclean: clean
-	/bin/rm -f $(NAME)
+ifeq ($(LIBRARY),0)
+	@echo "Limpiando $(NAME)"
+endif
+	@/bin/rm -f $(NAME)
 	
 re: fclean all
